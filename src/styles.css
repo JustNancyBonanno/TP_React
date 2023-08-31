@@ -1,0 +1,38 @@
+body {
+  background-image: url(./assets/ushi.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+}
+
+.cuerpo {
+  display: flex;
+  flex-direction: row;
+}
+
+.Formulario {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: lightseagreen;
+  align-items: center;
+}
+
+.Formulario label,
+input {
+  width: calc(100% - 8px);
+  text-align: left;
+  margin-top: 5px;
+}
