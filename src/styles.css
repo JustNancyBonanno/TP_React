@@ -47,3 +47,20 @@ input {
 	color: #D5D8DC;
   margin: 10px;
 }
+
+.Boton{
+  cursor: pointer;
+background-color: rgba(0, 0, 0, 0.5);
+border: 1px solid #d6d6e7;
+border-radius: 5px;
+height: 30px;
+width: 80px ;
+color: #D5D8DC;
+margin-right: 10px;
+margin-left: 15px;
+}
+
+.Botones{
+  display: flex;
+  margin-top: 30px;
+}
