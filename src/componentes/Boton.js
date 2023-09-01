@@ -5,7 +5,11 @@ export default class Boton extends React.Component {
     super(props);
     this.state = {};
   }
-  render() {
-    return <div>b</div>;
+    render() {
+     return(
+      <span className="Boton">
+        {this.props.titulo}
+      </span>
+     )
   }
 }
