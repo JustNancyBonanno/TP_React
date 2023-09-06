@@ -6,7 +6,7 @@ export default class Carta extends React.Component {
     this.state = {};
   }
   render() {
-    return 
+    return (
       <div class="Cuadradito">
 			<span onclick="eliminar({materia.codigo})" class="EliminarMateria"> x </span>
 			<span>{materia.materia}</span>
@@ -14,5 +14,6 @@ export default class Carta extends React.Component {
 			<span>cod: {materia.codigo} - {materia.notas}</span>
 			<span>prom: {promedio} </span>
 			</div>
+    );
   }
 }
