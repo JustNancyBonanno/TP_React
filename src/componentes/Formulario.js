@@ -12,6 +12,22 @@ export default class Formulario extends React.Component {
       codigo: ""
     };
   }
+
+  Guardar() {
+    const { materia, docente, horas, codigo} = this.state;
+    const msj = `La materia ha sido guardada.`
+    alert(msj);
+    
+  }
+
+  Agregar(){
+    alert("nueva nota")
+  }
+  Mostrar(){
+    alert("La materia fue mostrada  :( ")
+  }
+
+
   render() {
     const { materia, docente, horas, codigo } = this.state;
     return (
@@ -22,9 +38,9 @@ export default class Formulario extends React.Component {
           <Input titulo="Horas" />
           <Input titulo="Codigo" />
           <div className="Botones">
-          <Boton titulo="Guardar"/>
-          <Boton titulo="Agregar"/>
-          <Boton titulo="Mostrar"/>
+          <Boton titulo="Guardar" onClick={() => this.Guardar()}/>
+          <Boton titulo="Agregar" onClick={() => this.Agregar()}/>
+          <Boton titulo="Mostrar" onClick={() => this.Mostrar()}/>
           </div>
       </div>
     );

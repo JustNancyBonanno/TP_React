@@ -5,11 +5,13 @@ export default class Boton extends React.Component {
     super(props);
     this.state = {};
   }
+
     render() {
      return(
-      <span className="Boton" onClick={() => this.props.onClick()}>
+      <span className="Boton" onClick={() => this.props.onClick()}> 
         {this.props.titulo}
       </span>
      )
+
   }
 }
