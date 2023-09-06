@@ -7,7 +7,7 @@ export default class Boton extends React.Component {
   }
     render() {
      return(
-      <span className="Boton">
+      <span className="Boton" onClick={() => this.props.onClick()}>
         {this.props.titulo}
       </span>
      )

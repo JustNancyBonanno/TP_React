@@ -6,6 +6,7 @@ export default class Header extends React.Component {
     this.state = {};
   }
   render() {
-    return <div>header</div>;
+    return <div>
+    </div>;
   }
 }

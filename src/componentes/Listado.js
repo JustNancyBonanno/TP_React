@@ -1,4 +1,5 @@
 import React from "react";
+import Boton from "./Boton";
 
 export default class Listado extends React.Component {
   constructor(props) {
@@ -6,6 +7,17 @@ export default class Listado extends React.Component {
     this.state = {};
   }
   render() {
-    return <div className="Listado">listado</div>;
+    return (
+      <div className="Listado">
+     <h3> MATERIAS & INFORMACIÓN  </h3>
+      <div className="Tarjetas"> 
+      ss 
+      </div>
+      <Boton titulo="Limpiar"/>
+      
+      </div>
+
+    );
   }
 }
+

@@ -16,11 +16,11 @@ export default class Formulario extends React.Component {
     const { materia, docente, horas, codigo } = this.state;
     return (
       <div className="Formulario">
-        FORMULARIO DE INGRESO DE MATERIAS
-          <Input titulo="Materia:" />
-          <Input titulo="Docente:" />
-          <Input titulo="Horas:" />
-          <Input titulo="Codigo:" />
+       <h3> FORMULARIO DE INGRESO DE MATERIAS</h3>
+          <Input titulo="Materia" />
+          <Input titulo="Docente" />
+          <Input titulo="Horas" />
+          <Input titulo="Codigo" />
           <div className="Botones">
           <Boton titulo="Guardar"/>
           <Boton titulo="Agregar"/>
