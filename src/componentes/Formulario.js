@@ -9,38 +9,70 @@ export default class Formulario extends React.Component {
       materia: "",
       docente: "",
       horas: "",
-      codigo: ""
+      codigo: "",
+      nota: "",
     };
   }
 
-  Guardar() {
-    const { materia, docente, horas, codigo} = this.state;
-    const msj = `La materia ha sido guardada.`
-    alert(msj);
-    
+
+  guardar() {
+    const { materia, docente, horas, codigo, nota} = this.state;
+  //  const msj = `${materia}, ${docente}, ${horas}, ${codigo}, ${nota}`;
+    //alert(msj);
+    const datos ={materia, docente, horas, codigo, nota}
+    this.props.guardar(datos);
+  
   }
 
-  Agregar(){
-    alert("nueva nota")
+  agregarN(nota){
+    const divNotas = document.getElementById('Notas');
+    const notaFormulario = `<input type="number" class="nota"/>`
+  
+    divNotas.innerHTML += notaFormulario;
   }
-  Mostrar(){
+
+  mostrar(){
     alert("La materia fue mostrada  :( ")
   }
 
 
   render() {
-    const { materia, docente, horas, codigo } = this.state;
+    const { materia, docente, horas, codigo, nota, } = this.state;
     return (
       <div className="Formulario">
        <h3> FORMULARIO DE INGRESO DE MATERIAS</h3>
-          <Input titulo="Materia" />
-          <Input titulo="Docente" />
-          <Input titulo="Horas" />
-          <Input titulo="Codigo" />
+          <Input titulo="Materia"
+          valor={materia}
+          onChange={(valor) => this.setState({ materia: valor })}  
+          />
+          <Input titulo="Docente"
+          valor={docente}
+          onChange={(valor) => this.setState({ docente: valor })}
+          />
+          <Input titulo="Horas"
+          valor={horas} 
+          onChange={(valor) => this.setState({ horas: valor })}/>
+          <Input titulo="Codigo" 
+          valor={codigo}
+          onChange={(valor) => this.setState({ codigo: valor })}
+          />
+          <div className="Notas" id="Notas">
+            <input titulo="nota" type="number" className="nota"
+            valor={nota}
+            onChange={(valor) => this.setState({ nota: valor })}/>
+            <input  titulo="nota" type="number" className="nota"
+             valor={nota}
+             onChange={(valor) => this.setState({ nota: valor })}
+             />
+            <input titulo="nota" type="number" className="nota"
+             valor={nota}
+             onChange={(valor) => this.setState({ nota: valor })}
+             />
+          </div>
           <div className="Botones">
-          <Boton titulo="Guardar" onClick={() => this.Guardar()}/>
-          <Boton titulo="Agregar" onClick={() => this.Agregar()}/>
-          <Boton titulo="Mostrar" onClick={() => this.Mostrar()}/>
+          <Boton titulo="Guardar" onClick={() => this.guardar()}/>
+          <Boton titulo="Agregar" onClick={() => this.agregarN()}/>
+          <Boton titulo="Mostrar" onClick={() => this.mostrar()}/>
           </div>
       </div>
     );

@@ -61,6 +61,22 @@ input {
   margin: 10px;
 }
 
+
+.nota {
+	width: 35px;
+	background-color: rgba(0, 0, 0, 0.3); 
+	position: relative;
+	cursor: text;
+	font-size: 14px;
+	line-height: 20px;
+	padding: 0 16px;
+	height: 30px;
+	border: 1px solid #d6d6e7;
+	border-radius: 3px;
+	color: #D5D8DC;
+}
+
+
 .Boton{
 
   cursor: pointer;

@@ -5,6 +5,9 @@ export default class Carta extends React.Component {
     super(props);
     this.state = {};
   }
+
+  
+
   render() {
     return (
       <div class="Cuadradito">
