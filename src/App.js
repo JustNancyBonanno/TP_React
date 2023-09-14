@@ -11,11 +11,15 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      materias:[
-        {nombre:"matematica", codigo:"1223", hscatedras:"5hs", docente:"fulanito"}
-      ]
+      materias:[]
     };
   }
+
+componentDidMount(){
+  this.obtenerMaterias();
+}  
+
+
 guardar(datos){
 	axios.post(apiUrl +"/materias", datos )
 	.then((response) => {
@@ -29,10 +33,10 @@ guardar(datos){
 }
 
 obtenerMaterias(){
-	axios.get('http://192.168.0.196:3010/api/materias')
+	axios.get(apiUrl +"/materias")
 	.then((response) => {
 		console.log( response.data);
-		//const materiasObtenidas = response.data.materias;
+		//response.data.materias;
 		//escribir(materiasObtenidas);//llamar a ecribir materias
 	})
 	.catch((error) => {

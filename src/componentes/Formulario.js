@@ -6,9 +6,9 @@ export default class Formulario extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      materia: "",
+      nombre: "",
       docente: "",
-      horas: "",
+      hsCatedras: "",
       codigo: "",
       nota: "",
     };
@@ -16,10 +16,10 @@ export default class Formulario extends React.Component {
 
 
   guardar() {
-    const { materia, docente, horas, codigo, nota} = this.state;
+    const { nombre, docente, hsCatedras, codigo, nota} = this.state;
   //  const msj = `${materia}, ${docente}, ${horas}, ${codigo}, ${nota}`;
     //alert(msj);
-    const datos ={materia, docente, horas, codigo, nota}
+    const datos ={nombre, docente, hsCatedras, codigo, nota}
     this.props.guardar(datos);
   
   }

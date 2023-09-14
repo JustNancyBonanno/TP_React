@@ -11,11 +11,11 @@ export default class Carta extends React.Component {
   render() {
     const {nombre, docente, hsCatedras, codigo}=this.props
     return (
-      <div class="Cuadradito">
-			<span onclick="eliminar({materia.codigo})" class="EliminarMateria"> x </span>
+      <div class="Tarjetas">
+			<span onclick="eliminar({materia.codigo})" class="EliminarMateria"> {nombre}, {docente}, {hsCatedras}, {codigo} </span>
 			<span>{nombre}</span>
 			<span>{docente}, {hsCatedras}</span>
-			<span>cod: {codigo}</span>
+			<span>{codigo}</span>
 			</div>
     );
   }
