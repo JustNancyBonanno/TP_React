@@ -5,15 +5,21 @@ import Footer from "./componentes/Footer";
 import Listado from "./componentes/Listado";
 import "./styles.css";
 
+const apiUrl = 'https://hd6v8q-3000.csb.app/api';
+
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      materias:[
+        {nombre:"matematica", codigo:"1223", hscatedras:"5hs", docente:"fulanito"}
+      ]
+    };
   }
 guardar(datos){
-  const apiUrl = 'http://192.168.0.196:3010/api/materias';
-	axios.post(apiUrl, materia )
+	axios.post(apiUrl +"/materias", datos )
 	.then((response) => {
+    alert(response.data.status)
 		console.log('Materia guardada con exito:', response.data);
 	   this.obtenerMaterias();//llamar a obtener materias obtenerMaterias()
 	})
@@ -42,7 +48,7 @@ obtenerMaterias(){
         </div>
         <div className="cuerpo">
           <Formulario guardar={(datos)=> this.guardar(datos)}/>
-          <Listado />
+          <Listado materias={this.state.materias}/>
         </div>
         <div className="Footer">
         <Footer />
